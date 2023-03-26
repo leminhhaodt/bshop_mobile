@@ -1,0 +1,153 @@
+/*-----------------------------------*\
+  #CATEGORY
+\*-----------------------------------*/
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../fonts/SFPro/SF-Pro-Display-Regular.otf')
+}
+
+
+.category { margin-bottom: 30px; }
+
+.category-item-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* overflow: auto hidden; */
+  scroll-snap-type: inline mandatory;
+  overscroll-behavior-inline: contain;
+
+  display: grid;
+    /* auto auto is telling the browser to render two rows, if needed */
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+}
+
+.category-item {
+  /* min-width: 100%;
+  display: flex; */
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px 0 0;
+  border: 1px solid var(--cultured);
+  border-radius: var(--border-radius-md);
+  scroll-snap-align: start;
+  text-align: center;
+  text-decoration: none;
+}
+
+.category-img-box {
+  /* background: var(--cultured); */
+  /* border: 1px solid hsl(0, 0%, 80%); */
+  /* padding: 10px; */
+  background: #F8F4F4;
+  border-radius: 15px;
+}
+
+.category-content-box { width: 100%; }
+
+.category-content-flex {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.category-item-title {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  text-align: center;
+  margin-top: 7.14px;
+  /* text-transform: uppercase; */
+}
+
+.category-item-amount {
+  color: var(--sonic-silver);
+  font-size: var(--fs-11);
+}
+
+.category-btn {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: capitalize;
+  color: #AAAAAA;
+}
+
+.category .title p{
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+}
+
+/**
+ * scrollbar style
+ */
+
+ .has-scrollbar { padding-bottom: 5px; }
+
+ .has-scrollbar::-webkit-scrollbar {
+   width: 12px; 
+   height: 2px; 
+ }
+ 
+ .has-scrollbar::-webkit-scrollbar-thumb {
+   background: transparent;
+   border: 3px solid var(--white);
+   -webkit-border-radius: 20px;
+           border-radius: 20px;
+ }
+ 
+ .has-scrollbar:hover::-webkit-scrollbar-thumb { background: hsl(0, 0%, 90%); }
+ 
+ .has-scrollbar::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 80%); }
+ 
+ .title {
+   color: var(--eerie-black);
+   font-size: var(--fs-5);
+   font-weight: var(--weight-600);
+   letter-spacing: 0.4px;
+   text-transform: capitalize;
+   padding-bottom: 10px;
+   border-bottom: 1px solid var(--cultured);
+   margin-bottom: 30px;
+ }
+
+  /* !important is needed sometimes */
+  ::-webkit-scrollbar {
+    width: 12px !important;
+ }
+
+ /* Track */
+::-webkit-scrollbar-track {
+   -webkit-box-shadow:  #EDEDED !important;
+   -webkit-border-radius: 10px !important;
+   border-radius: 10px !important;
+   border: 1px solid #EDEDED;
+ }
+
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   -webkit-border-radius: 10px !important;
+   border-radius: 10px !important;
+   background: #B8B8B8 !important; 
+   -webkit-box-shadow: #B8B8B8 !important; 
+
+ }
+ ::-webkit-scrollbar-thumb:window-inactive {
+   background: #B8B8B8 !important; 
+ }
+ 
