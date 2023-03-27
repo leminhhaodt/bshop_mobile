@@ -1,0 +1,106 @@
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url(../fonts/SFPro/SF-Pro-Display-Regular.otf);
+}
+
+.accordion .accordion-header .btn, .accordion .accordion-header .accordion-button{
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.accordion .accordion-header .btn.collapsed:after, .accordion .accordion-header .accordion-button.collapsed:after{
+    /* width: 5px;
+    height: 13px; */
+
+    color:#000000;
+}
+
+.accordion .accordion-body{
+    text-align: center;
+}
+
+.accordion .accordion-body .cutoff-text p{
+    text-align: left;
+}
+/* SHOW ALL */
+.cutoff-text{
+    --max-lines:10;
+    --line-height: 1.4;
+    /* display: flex; */
+    max-height: calc(var(--max-lines) * 1em * var(--line-height));
+    line-height: var(--line-height);
+
+    overflow: hidden;
+    position: relative;
+
+}
+
+.cutoff-text:has(+ .expand-btn:not(:checked))::before{
+    content: "";
+    position: absolute;
+    height: calc(4em * var(--line-height));
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, white);
+    right: 0;
+
+}
+
+.expand-btn{
+    appearance: none;
+    border: 1px solid #D65F1D;
+    padding: .1em 2.7em .1em 1.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #D65F1D;
+}
+
+/* .expand-btn:hover{
+    background-color: #D65F1D;
+} */
+
+.expand-btn::before{
+    content: "Xem thêm";
+    /* background-image: url(../imgs/arrow-showall.svg);
+    background-repeat: no-repeat; */
+}
+.expand-btn::after{
+    content: url(../imgs/arrow-showall.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    padding-left: 9px;
+}
+
+
+.expand-btn:checked::before{
+    content: "Thu gọn";
+}
+
+
+.cutoff-text:has(+ .expand-btn:checked){
+    max-height: none;
+}
+
+.accordion .accordion-header .btn:before, .accordion .accordion-header .accordion-button:before{
+    background: #E1E1E1;
+    right: 16px;
+}
+
+.accordion .accordion-header .btn:after, .accordion .accordion-header .accordion-button:after{
+    opacity: 2;
+    background: url(../imgs/arrowdowninfo.svg) no-repeat center center !important;
+    transform: rotate(358deg) !important;
+}
