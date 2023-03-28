@@ -60,7 +60,7 @@
 
 .box-hot-deal-content .product-listing .product .image {
   cursor: pointer;
-  height: 270px;
+  height: 170px;
 }
 
 .box-hot-deal-content .product-listing .product .badge {
@@ -163,6 +163,7 @@
   font-size: 10px;
   line-height: 12px;
   margin-left: 2px;
+  color: #000000;
 }
 
 .box-hot-deal-content .product-listing .product .action .star {
@@ -193,6 +194,7 @@
   display: flex;
   align-items: center;
   margin-left: 3px;
+  color: #000000;
 }
 
 .box-hot-deal-content .product-listing .product .action .wishlist .heart-icon {
@@ -247,7 +249,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 3px 40px 1px 5px;
+  padding: 3px 1px 1px 5px;
   margin-top: 6px;
 }
 
@@ -288,4 +290,29 @@
 
 .owl-stage-outer .product .info{
   margin-left: 2px;
+}
+
+/*Áp dụng cho những máy có chiều rộng <= 406px*/
+@media (max-width: 406px) {
+  
+  .box-hot-deal-content .product-listing .product .price .price--new {
+    font-size: 13px;
+  }
+
+  .box-hot-deal-content .product-listing .product .price .price--old{
+    font-size: 10px;
+  }
+
+  .box-hot-deal-content .product-listing .product .action .star::after{
+    right: -3px;
+  }
+
+  .box-hot-deal-content .product-listing .product .action .star{
+    margin-right: 5px;
+  }
+
+  .box-hot-deal-header > .left .title{
+    font-size: 13px;
+  }
+   
 }

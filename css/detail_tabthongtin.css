@@ -84,6 +84,15 @@
     padding-left: 9px;
 }
 
+.expand-btn:checked::after{
+    content: url(../imgs/arrow-showall.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    padding-right: 9px;
+    margin-top: 3px;
+    transform: rotate(180deg);
+}
+
 
 .expand-btn:checked::before{
     content: "Thu gọn";
