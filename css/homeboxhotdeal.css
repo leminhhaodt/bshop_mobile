@@ -60,7 +60,7 @@
 
 .box-hot-deal-content .product-listing .product .image {
   cursor: pointer;
-  height: 170px;
+  /* height: 170px; */
 }
 
 .box-hot-deal-content .product-listing .product .badge {
@@ -129,6 +129,7 @@
   line-height: 13px;
   text-decoration-line: line-through;
   color: #848484;
+  margin-left: 2px;
 }
 
 .box-hot-deal-content .product-listing .product .pricing .discount {
